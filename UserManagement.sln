@@ -5,6 +5,8 @@ VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserManagement.API", "UserManagement.API\UserManagement.API.csproj", "{B151600C-D5B2-44A3-A3DF-3F7E7DC667B9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserManagement.DAL", "UserManagement.DAL\UserManagement.DAL.csproj", "{2DE53ACA-1661-4A37-A953-0BAD233FDC27}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{B151600C-D5B2-44A3-A3DF-3F7E7DC667B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B151600C-D5B2-44A3-A3DF-3F7E7DC667B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B151600C-D5B2-44A3-A3DF-3F7E7DC667B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DE53ACA-1661-4A37-A953-0BAD233FDC27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DE53ACA-1661-4A37-A953-0BAD233FDC27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DE53ACA-1661-4A37-A953-0BAD233FDC27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DE53ACA-1661-4A37-A953-0BAD233FDC27}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
