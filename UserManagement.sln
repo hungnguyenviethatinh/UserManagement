@@ -3,9 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserManagement.API", "UserManagement.API\UserManagement.API.csproj", "{B151600C-D5B2-44A3-A3DF-3F7E7DC667B9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserManagement.API", "UserManagement.API\UserManagement.API.csproj", "{B151600C-D5B2-44A3-A3DF-3F7E7DC667B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserManagement.DAL", "UserManagement.DAL\UserManagement.DAL.csproj", "{2DE53ACA-1661-4A37-A953-0BAD233FDC27}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserManagement.DAL", "UserManagement.DAL\UserManagement.DAL.csproj", "{2DE53ACA-1661-4A37-A953-0BAD233FDC27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserManagement.Services", "UserManagement.Services\UserManagement.Services.csproj", "{78F0C641-203E-4840-AA6B-F9CCC37B213D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserManagement.Shared", "UserManagement.Shared\UserManagement.Shared.csproj", "{74F4F6FB-0726-4D4E-8DC6-CC1D02661D5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserManagement.ViewModels", "UserManagement.ViewModels\UserManagement.ViewModels.csproj", "{539BA83B-1294-494E-AA15-34BB145003FC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +27,18 @@ Global
 		{2DE53ACA-1661-4A37-A953-0BAD233FDC27}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2DE53ACA-1661-4A37-A953-0BAD233FDC27}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2DE53ACA-1661-4A37-A953-0BAD233FDC27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78F0C641-203E-4840-AA6B-F9CCC37B213D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78F0C641-203E-4840-AA6B-F9CCC37B213D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78F0C641-203E-4840-AA6B-F9CCC37B213D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78F0C641-203E-4840-AA6B-F9CCC37B213D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74F4F6FB-0726-4D4E-8DC6-CC1D02661D5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74F4F6FB-0726-4D4E-8DC6-CC1D02661D5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74F4F6FB-0726-4D4E-8DC6-CC1D02661D5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74F4F6FB-0726-4D4E-8DC6-CC1D02661D5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{539BA83B-1294-494E-AA15-34BB145003FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{539BA83B-1294-494E-AA15-34BB145003FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{539BA83B-1294-494E-AA15-34BB145003FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{539BA83B-1294-494E-AA15-34BB145003FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

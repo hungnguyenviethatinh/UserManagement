@@ -1,5 +1,8 @@
 using Microsoft.EntityFrameworkCore;
+using UserManagement.API.MapperProfiles;
 using UserManagement.DAL;
+using UserManagement.Services.Impl.User;
+using UserManagement.Services.Interfaces.User;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,7 +17,14 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 builder.Services.AddLogging();
 
+builder.Services.AddAutoMapper(config =>
+{
+    config.AddProfile(new UserMapperProfile());
+});
+
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IDatabaseInitializer, DatabaseInitializer>();
+builder.Services.AddScoped<IUserService, UserService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
