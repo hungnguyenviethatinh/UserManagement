@@ -1,7 +1,7 @@
 ﻿namespace UserManagement.Shared.Constants
 {
-    public class Constants
+    public static class Constants
     {
-
+        public const string AdminToken = "AdminToken";
     }
 }

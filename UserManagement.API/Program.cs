@@ -1,8 +1,11 @@
 using Microsoft.EntityFrameworkCore;
 using UserManagement.API.MapperProfiles;
 using UserManagement.DAL;
+using UserManagement.Services.Impl.Authentication;
 using UserManagement.Services.Impl.User;
+using UserManagement.Services.Interfaces.Authentication;
 using UserManagement.Services.Interfaces.User;
+using UserManagement.Shared.Settings;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,8 +25,11 @@ builder.Services.AddAutoMapper(config =>
     config.AddProfile(new UserMapperProfile());
 });
 
+builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
+
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IDatabaseInitializer, DatabaseInitializer>();
+builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
 builder.Services.AddScoped<IUserService, UserService>();
 
 builder.Services.AddControllers();

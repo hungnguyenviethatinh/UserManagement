@@ -22,6 +22,7 @@
   <ItemGroup>
     <ProjectReference Include="..\UserManagement.DAL\UserManagement.DAL.csproj" />
     <ProjectReference Include="..\UserManagement.Services\UserManagement.Services.csproj" />
+    <ProjectReference Include="..\UserManagement.Shared\UserManagement.Shared.csproj" />
     <ProjectReference Include="..\UserManagement.ViewModels\UserManagement.ViewModels.csproj" />
   </ItemGroup>
 
