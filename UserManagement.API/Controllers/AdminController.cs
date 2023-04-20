@@ -1,11 +1,14 @@
 using Microsoft.AspNetCore.Mvc;
+using UserManagement.API.Helpers;
 using UserManagement.Services.Interfaces.User;
+using UserManagement.Shared.Constants;
 using UserManagement.ViewModels.User;
 
 namespace UserManagement.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(Role = RoleConstants.Admin)]
     public class AdminController : ControllerBase
     {
         private readonly IUserService _userService;

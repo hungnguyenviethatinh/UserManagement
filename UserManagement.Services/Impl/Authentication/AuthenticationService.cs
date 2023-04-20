@@ -5,7 +5,6 @@ using System.Security.Claims;
 using System.Text;
 using UserManagement.DAL;
 using UserManagement.Services.Interfaces.Authentication;
-using UserManagement.Shared.Constants;
 using UserManagement.Shared.Settings;
 using UserManagement.ViewModels.Authentication;
 
@@ -33,7 +32,7 @@ namespace UserManagement.Services.Impl.Authentication
 
             if (user != null)
             {
-                var token = user.Role == RoleConstants.Admin ? Constants.AdminToken : GenerateJwtToken(user);
+                var token = GenerateJwtToken(user);
 
                 return new AuthenticationResponse
                 {

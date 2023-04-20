@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using UserManagement.API.Helpers;
 using UserManagement.API.MapperProfiles;
 using UserManagement.DAL;
 using UserManagement.Services.Impl.Authentication;
@@ -49,6 +50,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+app.UseMiddleware<JwtMiddleware>();
 
 app.MapControllers();
 
