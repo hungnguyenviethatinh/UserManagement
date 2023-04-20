@@ -18,14 +18,19 @@ namespace UserManagement.API.Controllers
         [HttpPost]
         public async Task<IActionResult> Authenticate(AuthenticationRequest model)
         {
-            var response = await _authenticationService.AuthenticateAsync(model);
-
-            if (response == null)
+            if (ModelState.IsValid)
             {
-                return BadRequest(new { message = "Username or password is incorrect" });
+                var response = await _authenticationService.AuthenticateAsync(model);
+
+                if (response == null)
+                {
+                    return BadRequest(new { message = "Username or password is incorrect" });
+                }
+
+                return Ok(response);
             }
 
-            return Ok(response);
+            return BadRequest(ModelState);
         }
     }
 }

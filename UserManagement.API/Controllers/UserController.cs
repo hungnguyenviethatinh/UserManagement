@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.Data;
 using UserManagement.API.Helpers;
 using UserManagement.Services.Interfaces.User;
 using UserManagement.Shared.Constants;
