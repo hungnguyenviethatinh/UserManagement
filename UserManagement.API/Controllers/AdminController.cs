@@ -18,7 +18,7 @@ namespace UserManagement.API.Controllers
             _userService = userService;
         }
 
-        [HttpGet]
+        [HttpGet("GetUsers")]
         public IActionResult GetUsers()
         {
             var users = _userService.GetUsers();
@@ -26,7 +26,7 @@ namespace UserManagement.API.Controllers
             return Ok(users);
         }
 
-        [HttpPost]
+        [HttpPost("AddUser")]
         public async Task<IActionResult> AddUser(UserAddModel model)
         {
             if (ModelState.IsValid)
@@ -39,7 +39,7 @@ namespace UserManagement.API.Controllers
             return BadRequest(ModelState);
         }
 
-        [HttpPut]
+        [HttpPut("UpdateUser")]
         public async Task<IActionResult> UpdateUser(UserUpdateModel model)
         {
             if (ModelState.IsValid)
@@ -52,7 +52,7 @@ namespace UserManagement.API.Controllers
             return BadRequest(ModelState);
         }
 
-        [HttpDelete]
+        [HttpDelete("DeleteUser")]
         public async Task<IActionResult> DeleteUser(string userName)
         {
             var result = await _userService.DeleteUserByUserNameAsync(userName);

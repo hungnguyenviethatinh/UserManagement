@@ -19,7 +19,7 @@ namespace UserManagement.API.Controllers
             _userService = userService;
         }
 
-        [HttpGet]
+        [HttpGet("GetUser")]
         public async Task<IActionResult> GetUser(string userName)
         {
             var user = await _userService.GetUserByUserNameAsync(userName);
@@ -27,7 +27,7 @@ namespace UserManagement.API.Controllers
             return Ok(user);
         }
 
-        [HttpPut]
+        [HttpPut("UpdateUser")]
         public async Task<IActionResult> UpdateUser(UserUpdateModel model)
         {
             if (ModelState.IsValid)
